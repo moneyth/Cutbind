@@ -1,0 +1,6 @@
+{
+  "name": "CutBind Booklet Converter",
+  "description": "A browser-based PDF booklet converter to impose PDFs into cut-and-bind layout for duplex printing with a red dashed cut line and custom gutter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

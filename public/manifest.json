@@ -1,0 +1,22 @@
+{
+  "short_name": "CutBind",
+  "name": "CutBind Booklet Converter",
+  "description": "Rearranges PDF pages into a cut-and-bind layout for perfect zero-creep booklets.",
+  "start_url": "/",
+  "background_color": "#f5f0e8",
+  "theme_color": "#0f0f0f",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

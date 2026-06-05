@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", sans-serif;
+  --font-display: "Bangers", cursive;
+  --font-accent: "Permanent Marker", cursive;
+
+  --color-ink: #0f0f0f;
+  --color-paper: #f5f0e8;
+  --color-paper2: #ede8d8;
+  --color-brand-red: #e8272a;
+  --color-brand-yellow: #f5c500;
+  --color-brand-blue: #1a3a8f;
+  --color-brand-green: #1a7a3a;
+  --color-brand-white: #ffffff;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-paper);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Ccircle cx='4' cy='4' r='1.1' fill='%230f0f0f' opacity='0.06'/%3E%3C/svg%3E");
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    min-height: 100vh;
+  }
+}
+
+/* Custom animation for float and rotation on buttons */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Elegant hand-drawn squiggly border feel and halftone background */
+.brutalist-card {
+  background-color: var(--color-brand-white);
+  border: 3px solid var(--color-ink);
+  border-radius: 6px;
+  box-shadow: 6px 6px 0 var(--color-ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brutalist-button {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  border: 3px solid var(--color-ink);
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 var(--color-ink);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.brutalist-button:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--color-ink);
+}
+
+.brutalist-button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.brutalist-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.brutalist-badge {
+  background-color: var(--color-ink);
+  color: var(--color-brand-white);
+  font-weight: 900;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border: 2px solid var(--color-ink);
+}
+
+.brutalist-toggle {
+  font-family: var(--font-sans);
+  font-weight: 900;
+  font-size: 0.825rem;
+  background-color: var(--color-brand-white);
+  color: var(--color-ink);
+  border: 2.5px solid var(--color-ink);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.brutalist-toggle.active {
+  background-color: var(--color-ink);
+  color: var(--color-brand-yellow);
+}
+
+.progress-wrap {
+  background-color: var(--color-paper2);
+  border: 3px solid var(--color-ink);
+  border-radius: 100px;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-brand-red),
+    var(--color-brand-red) 10px,
+    var(--color-brand-yellow) 10px,
+    var(--color-brand-yellow) 20px
+  );
+  transition: width 0.3s ease;
+}
